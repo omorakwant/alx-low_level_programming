@@ -1,10 +1,12 @@
-#ifndef FUCTIONPOINTERS_FUNCTION_POINTERS_H
-#define FUCTIONPOINTERS_FUNCTION_POINTERS_H
-typedef int (*operation_ptr) (int, int);
-int add(int a, int b);
-int multiply(int a, int b);
-int do_operation(int (*op)(int, int), int x, int y);
-int do_ptr(operation_ptr op_ptr, int x, int y);
-uint32_t do_test(uint32_t (*op) (uint32_t, char[9]), uint32_t octet, char hex[9]);
-uint32_t test(uint32_t octet, char hex[9]);
+#ifndef FUNCTION_POINTERS_H
+#define FUNCTION_POINTERS_H
+
+#include <stddef.h>
+#include <stdlib.h>
+
+void print_name(char *name, void (*f)(char *));
+int _putchar(char c);
+void array_iterator(int *array, size_t size, void (*action)(int));
+int int_index(int *array, int size, int (*cmp)(int));
+
 #endif
