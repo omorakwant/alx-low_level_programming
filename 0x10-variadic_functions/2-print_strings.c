@@ -1,5 +1,5 @@
 #include "variadic_functions.h"
-#include <stdio.h
+#include <stdio.h>
 #include <stdarg.h>
 /**
 *print_string prints strings,followed by new line
@@ -11,7 +11,7 @@
 *if one of the strings id (nil) error is printed instead
 *
 */
-void print_strings(const char *separator, const unsigned int n, ...);
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 va_list strings;
  char*str;
