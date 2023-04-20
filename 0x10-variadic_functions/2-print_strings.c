@@ -25,7 +25,7 @@ va_list strings;
      else
        printf("%s",str);
      if(i!=(n-1)&&separator!=NULL)
-       print("%s",separator);
+       printf("%s",separator);
    }
  printf("\n");
  va_end(strings);
